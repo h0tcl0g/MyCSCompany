@@ -1,17 +1,16 @@
-# MyCSCompany - Cursor Native AI Company
+# MyCSCompany - Cursor Hybrid AI Company
 
-このプロジェクトは、CursorのAgent機能を活用して構築された「AI社員が働く仮想カンパニー」のテンプレートです。
-（Original idea by cc-company & cc-secretary）
+このプロジェクトは、CursorのAgent機能を活用した「AI社員が働く仮想カンパニー」のテンプレートです。
+（Original idea by [cc-company](https://github.com/Shin-sibainu/cc-company) & [cc-secretary](https://github.com/Shin-sibainu/cc-secretary)）
 
-## 概要
+## 使い方
 
-Claude Codeのプラグインとして動作していたAI秘書・組織管理システムを、Cursorのネイティブ機能（`.mdc` ルールと `.md` コマンド）のみで動作するように再構築しています。API課金を抑えつつ、自律的なタスク管理とコンテキスト蓄積を実現します。
+Composer (Agentモード) で以下のコマンドを入力してください。
 
-## 運用方法（プロジェクト立ち上げ）
+- `/company`: 会社組織のセットアップと運営
+- `/secretary`: パーソナル秘書のセットアップと管理
 
-新しい仕事やプロジェクトを始める際は、このリポジトリをテンプレートとして複製（フォーク）して使用します。
+## 特徴
 
-1. このテンプレートをコピーして新しいフォルダを作成し、Cursorで開く
-2. Cursor Composer (Agentモード) で以下を実行
-   - 会社設立: `@company.md 組織のセットアップを開始して`
-   - 秘書雇用: `@secretary.md 秘書のセットアップを開始して`
+- **Skillベース**: `.claude/skills/` により `/` コマンドが機能します。
+- **MDCベース**: `.cursor/rules/` により、AI秘書の振る舞いや自動記録ルールが常時適用されます。
