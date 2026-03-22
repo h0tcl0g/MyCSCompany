@@ -7,7 +7,7 @@
 対象ディレクトリに `.company/` が存在するか確認する。
 
 - **`.company/` が存在し、`ceo/` もある** → v1検出 → **v1→v2 マイグレーション**へ進む。
-- **`.company/` が存在する（v2）** → `.company/CLAUDE.md` を読み込み → **運営モード**へ進む。
+- **`.company/` が存在する（v2）** → **運営モード**へ進む。
 - **`.company/` が存在しない** → **Step 2: オンボーディング**へ進む。
 
 ### Step 2: オンボーディング（2問だけ）
@@ -26,18 +26,17 @@
 > 今の目標や、日々困っていることがあれば教えてください。
 > 例: 「SaaSで月10万目指してる」「タスクが散らかる」「アイデアを忘れる」
 
-### Step 3: 秘書室を自動作成（Automatic）
+### Step 3: 秘書室の自動作成
 
-ヒアリング結果をもとに、以下を自動生成する。
-.company/
-├── CLAUDE.md
-└── secretary/
-├── CLAUDE.md
-├── inbox/
-├── todos/
-│ └── YYYY-MM-DD.md
-└── notes/
+ヒアリング結果をもとに、以下のディレクトリとファイルを自動生成する。
 
-## 運営モード
+1. `secretary/` フォルダとその配下（`inbox/`, `todos/`, `notes/`）を作成する。
+2. `.cursor/templates/dept_rule.mdc` をコピーし、`.cursor/rules/dept_secretary.mdc` を作成する。その際、変数を以下のように置換する。
+   - `{{DEPARTMENT_NAME}}` -> 秘書室
+   - `{{DEPARTMENT_FOLDER}}` -> secretary
+   - `{{DEPARTMENT_ROLE}}` -> 窓口・相談役。TODO管理、壁打ち、メモ。
+3. 今日の日付で `secretary/todos/YYYY-MM-DD.md` を作成する。内容は `.cursor/templates/daily.md` をコピーし、日付変数を置換する。
 
-秘書が内容を判断し、秘書で完結するものは直接対応、部署が必要なものは該当部署のフォルダに直接書き込むこと。同じ領域のタスクが2回以上処理された場合は、部署の自然な追加を提案すること。
+## 運営モード（部署の自動追加）
+
+同じ領域のタスクが2回以上処理された場合、部署の追加を提案する。ユーザーが承認した場合、該当フォルダを作成し、同時に `.cursor/templates/dept_rule.mdc` を元に `.cursor/rules/dept_[部署名].mdc` を自動生成する。

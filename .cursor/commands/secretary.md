@@ -6,7 +6,7 @@
 
 対象ディレクトリに `.secretary/` が存在するか確認する。
 
-- **`.secretary/` が存在する場合**: `.secretary/CLAUDE.md` を読み込み、**管理モード**へ進む。
+- **`.secretary/` が存在する場合**: **管理モード**へ進む。
 - **`.secretary/` が存在しない場合**: **Step 2: オンボーディング**へ進む。
 
 ### Step 2: オンボーディング（Interactive）
@@ -25,7 +25,11 @@
 
 ### Step 4 & 5: 自動生成と完了サマリー
 
-確認後、ディレクトリツリー、`_template.md`、`.secretary/CLAUDE.md` を生成し、クイックスタートガイドを表示する。
+ユーザーの承認後、指定の場所に `.secretary/` フォルダを作成する。
+
+1. 選択されたカテゴリのフォルダを作成する。
+2. `.cursor/templates/dept_rule.mdc` をコピーして `.cursor/rules/dept_personal_secretary.mdc` を作成し、オンボーディングの回答（役割、ワークスタイル等）をルールとして追記する。
+3. 今日のデイリーファイル（`todos/YYYY-MM-DD.md`）とInboxファイル（`inbox/YYYY-MM-DD.md`）を、それぞれ `.cursor/templates/daily.md` と `inbox.md` を使って作成する。
 
 ## 管理モード
 
