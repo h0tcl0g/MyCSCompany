@@ -1,3 +1,8 @@
+---
+name: secretary
+description: パーソナル秘書のセットアップと管理を行うスキル
+---
+
 # パーソナル秘書
 
 ## ワークフロー
@@ -35,8 +40,8 @@
 ユーザーの承認後、指定の場所に `.secretary/` フォルダを作成する。
 
 1. 選択されたカテゴリのフォルダを作成する。
-2. `.cursor/templates/dept_rule.mdc` をコピーして `.cursor/rules/dept_personal_secretary.mdc` を作成し、オンボーディングの回答（役割、ワークスタイル等）をルールとして追記する。
-3. 今日のデイリーファイル（`todos/YYYY-MM-DD.md`）とInboxファイル（`inbox/YYYY-MM-DD.md`）を、それぞれ `.cursor/templates/daily.md` と `inbox.md` を使って作成する。
+2. `.claude/templates/dept_rule.mdc` をコピーして `.claude/rules/dept_personal_secretary.mdc` を作成し、オンボーディングの回答（役割、ワークスタイル等）をルールとして追記する。
+3. 今日のデイリーファイル（`todos/YYYY-MM-DD.md`）とInboxファイル（`inbox/YYYY-MM-DD.md`）を、それぞれ `.claude/templates/daily.md` と `inbox.md` を使って作成する。
 
 ## 管理モード
 
