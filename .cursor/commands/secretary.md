@@ -21,7 +21,16 @@
 
 ### Step 3: 構成確認（Interactive）
 
-ユーザーの役割から推奨フォルダ構成をマッピングし、ユーザーに確認する。
+ユーザーの役割から以下の推奨フォルダ構成をマッピングし、ユーザーに確認する。
+
+- ソフトウェア開発者: todos, projects, ideas, knowledge, debugging
+- コンテンツクリエイター: todos, content-plan, ideas, research
+- 学生・研究者: todos, courses, research, knowledge, reading-list
+- フリーランス: todos, clients, projects, ideas, research
+- デザイナー: todos, projects, ideas, research, knowledge
+- マネージャー: todos, meetings, projects, knowledge
+- その他・汎用: todos, ideas, knowledge
+  ※ inbox と reviews は常に含める。
 
 ### Step 4 & 5: 自動生成と完了サマリー
 

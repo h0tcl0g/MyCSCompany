@@ -1,0 +1,17 @@
+---
+description: {{DEPARTMENT_NAME}}の運用ルール
+globs: {{DEPARTMENT_FOLDER}}/**/*
+alwaysApply: true
+---
+
+# {{DEPARTMENT_NAME}}
+
+## 役割
+
+{{DEPARTMENT_ROLE}}
+
+## ルール
+
+- ファイル命名: `kebab-case-title.md`
+- 1トピック1ファイル
+- 同じ日付のファイルは追記、新規作成しない

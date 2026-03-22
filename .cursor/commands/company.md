@@ -36,6 +36,7 @@
    - `{{DEPARTMENT_FOLDER}}` -> secretary
    - `{{DEPARTMENT_ROLE}}` -> 窓口・相談役。TODO管理、壁打ち、メモ。
 3. 今日の日付で `secretary/todos/YYYY-MM-DD.md` を作成する。内容は `.cursor/templates/daily.md` をコピーし、日付変数を置換する。
+4. `.cursor/templates/company_profile.mdc` をコピーし、ヒアリングしたQ1とQ2の回答をもとに、 `.cursor/rules/company_profile.mdc` を作成する。
 
 ## 運営モード（部署の自動追加）
 
